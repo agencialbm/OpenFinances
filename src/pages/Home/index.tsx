@@ -3,8 +3,9 @@ import { Footer } from '@/components/Footer';
 import { Header } from '@/components/Header';
 import { Icon } from '@/components/Icon';
 import { TextCard } from '@/components/TextCard';
-import { Content, SectionHeader, ContentTexto } from './styled';
+import { Content, SectionHeader, ContentTexto, SectionMain } from './styled';
 import imgfundo from '../../assets/FundoHeader.png';
+import { MultiplosCard } from '@/components/MultiplosCard';
 
 
 export function Home() {
@@ -29,6 +30,11 @@ export function Home() {
           <TextCard title='Valores' description='Construir relacionamentos duradouros e transparentes, buscando a melhor alternativa de negócios para os nossos clientes.'/>
         </ContentTexto>
       </SectionHeader>
+      <SectionMain>
+        <h2>Conheça nossas soluções de crédito para você e sua empresa</h2>
+        <MultiplosCard/>
+      </SectionMain>
+      <Footer/>
     </>
   );
 }

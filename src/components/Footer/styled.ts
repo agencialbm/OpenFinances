@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 export const ContainerFooter = styled.div`
 
-padding: 80px 120px;
+padding: 80px 121px;
 
 background-color: ${({theme}) => theme.GRAY_100};
 

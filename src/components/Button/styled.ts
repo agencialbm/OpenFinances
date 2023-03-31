@@ -4,10 +4,9 @@ export const ContainerButton = styled.button`
   background-color: ${({ theme }) => theme.YELLOW};
   color: ${({ theme }) => theme.BLACK};
 
-  width: 100%;
-  max-width: 286px;
-  padding: 35px 20px 35px 35px;
-
+  width: 286px;
+  height: 123px;
+  padding-left: 30px;
   display: flex;
   align-items: center;
   gap: 32px;
@@ -19,6 +18,7 @@ export const ContainerButton = styled.button`
     font-size: 16px;
     line-height: 20px;
     font-family: 'Montserrat', sans-serif;
+    text-align: left;
   }
 
 `;

@@ -6,12 +6,7 @@ export const SectionHeader = styled.div`
 
   background-color: black;
   width: 100%;
-  max-width: 1920px;
-  padding: 35px 25px 0 93px;
-
-
-
-
+  padding: 35px 25px 0 148px;
 
 `;
 
@@ -48,14 +43,37 @@ export const ContentTexto = styled.div`
  align-items: center;
  justify-content: space-between;
  width: 100%;
- max-width: 1920px;
-position: relative;
+ max-width: 1623px;
+ position: relative;
  bottom: -141px;
 
 
 
 
  border-radius: 10px;
+
+
+`;
+
+export const SectionMain = styled.div`
+
+width: 100%;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+padding: 206px 0 175px 0;
+
+>h2{
+
+  margin-bottom: 108px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 43px;
+  text-align: center;
+  max-width: 618px;
+}
 
 
 `;

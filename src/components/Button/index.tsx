@@ -9,7 +9,8 @@ interface IButton {
 export function Button({children, title}: IButton){
   return(
     <ContainerButton data-testid="button">
-      {children}
+      <div>{children}</div>
+
       <p>{title}</p>
     </ContainerButton>
   );
