@@ -103,16 +103,23 @@ export const ContainerButton = styled.div`
   display: flex;
   flex-direction: column;
   gap: 90px;
+  margin-top: 140px;
 
-`
+
+`;
 
 export const ButtonOne = styled.button<Prop>`
       font-weight: 600;
       font-size: 22px;
       line-height: 27px;
       position: relative;
+      width: 361px;
+      height: 102px;
       color: ${props => (props.isActive ? 'black' : '#ffff')};
       background:  ${props => (props.isActive ? '#ffff' : 'transparent')};
+      border-radius: ${props => (props.isActive ? '10px' : '')};
+      box-shadow:  ${props => (props.isActive ? '0px 0px 15px #FFFFFF' : '')};
+
 
       &:after{
       content: '';
@@ -123,15 +130,20 @@ export const ButtonOne = styled.button<Prop>`
       border-radius: ${props => (props.isActive ? '' : '3px')};
       left: ${props => (props.isActive ? '' : '46px')};;
     }
-`
+`;
 
 export const ButtonTue = styled.button<Prop>`
       font-weight: 600;
       font-size: 22px;
       line-height: 27px;
       position: relative;
+      width: 361px;
+      height: 102px;
       color: ${props => (props.isActive ? '#ffff' : 'black')};
       background:  ${props => (props.isActive ? 'transparent' : '#ffff')};
+      border-radius: ${props => (props.isActive ? '' : '10px')};
+      box-shadow:  ${props => (props.isActive ? '' : '0px 0px 15px #FFFFFF')};
+
 
       &:after{
       content: '';
@@ -142,7 +154,7 @@ export const ButtonTue = styled.button<Prop>`
       border-radius: ${props => (props.isActive ? '3px' : '')};
       left: ${props => (props.isActive ? '46px' : '')};;
     }
-`
+`;
 
 
 
