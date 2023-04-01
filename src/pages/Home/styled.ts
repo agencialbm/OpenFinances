@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
-
+interface Prop {
+  isActive: boolean;
+}
 
 export const SectionHeader = styled.div`
 
@@ -78,12 +80,80 @@ padding: 206px 0 175px 0;
 
 `;
 
-export const Formulario = styled.div`
+export const SectionForm = styled.div`
 background: black;
 width: 100%;
-height: 751px;
+padding: 90px 0;
+
+
+`;
+
+export const Formulario = styled.div<Prop>`
+
+background: black;
+width: 100%;
+max-width: 1000px;
 display: flex;
-gap: 30px;
+justify-content: space-between;
+margin: 0 auto;
+
+>.button{
+  display: flex;
+  flex-direction: column;
+  gap: 90px;
+
+  >button{
+
+      font-weight: 600;
+      font-size: 22px;
+      line-height: 27px;
+      position: relative;
+      background: transparent;
+
+      &:after{
+      content: '';
+      width: 6px;
+      height: 42px;
+      position: absolute;
+      background: #FFFFFF;
+      border-radius: 3px;
+      left: 46px;
+
+    }
+
+    { isActive === true ?  : ''}
+    &.isActive{
+      background: #FFFFFF;
+      width: 361px;
+      height: 102px;
+      box-shadow: 0px 0px 15px #FFFFFF;
+      border-radius: 10px;
+      color: black;
+
+      :after {
+        width: 0;
+      }
+    }
+
+    &.isDisabled{
+      background: transparent;
+
+
+      &:after{
+      content: '';
+      width: 6px;
+      height: 42px;
+      position: absolute;
+      background: #FFFFFF;
+      border-radius: 3px;
+      left: 46px;
+
+    }
+    }
+
+  }
+}
+
 
 `;
 
