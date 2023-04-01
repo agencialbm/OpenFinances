@@ -88,7 +88,7 @@ padding: 90px 0;
 
 `;
 
-export const Formulario = styled.div<Prop>`
+export const Formulario = styled.div`
 
 background: black;
 width: 100%;
@@ -97,63 +97,53 @@ display: flex;
 justify-content: space-between;
 margin: 0 auto;
 
->.button{
+`;
+
+export const ContainerButton = styled.div`
   display: flex;
   flex-direction: column;
   gap: 90px;
 
-  >button{
+`
 
+export const ButtonOne = styled.button<Prop>`
       font-weight: 600;
       font-size: 22px;
       line-height: 27px;
       position: relative;
-      background: transparent;
+      color: ${props => (props.isActive ? 'black' : '#ffff')};
+      background:  ${props => (props.isActive ? '#ffff' : 'transparent')};
 
       &:after{
       content: '';
-      width: 6px;
-      height: 42px;
-      position: absolute;
-      background: #FFFFFF;
-      border-radius: 3px;
-      left: 46px;
-
+      width:   ${props => (props.isActive ? '' : '6px')};
+      height: ${props => (props.isActive ? '' : '42px')};
+      position: ${props => (props.isActive ? '' : 'absolute')};
+      background: ${props => (props.isActive ? '' : '#ffffff')};
+      border-radius: ${props => (props.isActive ? '' : '3px')};
+      left: ${props => (props.isActive ? '' : '46px')};;
     }
+`
 
-    { isActive === true ?  : ''}
-    &.isActive{
-      background: #FFFFFF;
-      width: 361px;
-      height: 102px;
-      box-shadow: 0px 0px 15px #FFFFFF;
-      border-radius: 10px;
-      color: black;
-
-      :after {
-        width: 0;
-      }
-    }
-
-    &.isDisabled{
-      background: transparent;
-
+export const ButtonTue = styled.button<Prop>`
+      font-weight: 600;
+      font-size: 22px;
+      line-height: 27px;
+      position: relative;
+      color: ${props => (props.isActive ? '#ffff' : 'black')};
+      background:  ${props => (props.isActive ? 'transparent' : '#ffff')};
 
       &:after{
       content: '';
-      width: 6px;
-      height: 42px;
-      position: absolute;
-      background: #FFFFFF;
-      border-radius: 3px;
-      left: 46px;
-
+      width:   ${props => (props.isActive ? '6px' : '')};
+      height: ${props => (props.isActive ? '42px' : '')};
+      position: ${props => (props.isActive ? 'absolute' : '')};
+      background: ${props => (props.isActive ? '#ffffff' : '')};
+      border-radius: ${props => (props.isActive ? '3px' : '')};
+      left: ${props => (props.isActive ? '46px' : '')};;
     }
-    }
-
-  }
-}
+`
 
 
-`;
+
 

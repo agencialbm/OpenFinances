@@ -8,20 +8,28 @@ import {
   ContentTexto,
   SectionMain,
   Formulario,
-  SectionForm
+  SectionForm,
+  ContainerButton,
+  ButtonOne,
+  ButtonTue
 } from './styled';
 import imgfundo from '../../assets/FundoHeader.png';
 import { MultiplosCard } from '@/components/MultiplosCard';
 
 import { FormPF } from '@/components/FormPF';
+import { FormPJ } from '@/components/FormPJ';
 
 export function Home() {
-  const [isActive, setIsActive] = useState(false);
+  const [isActive, setIsActive] = useState(true);
 
-  const handleActive = () => {
+  const handleActiveOne = () => {
     setIsActive(true);
-
   };
+
+  const handleActiveTue = () => {
+    setIsActive(false);
+  };
+
   console.log(isActive);
 
   return (
@@ -60,16 +68,17 @@ export function Home() {
       </SectionMain>
       <SectionForm>
         <Formulario>
-          <FormPF />
-          <div className="button">
-            <button>Pessoa Física</button>
-            <button
+          {isActive ?  <FormPF /> : <FormPJ />}
+          <ContainerButton >
+            <ButtonOne isActive={isActive} onClick={handleActiveOne}>Pessoa Física</ButtonOne>
 
-              onClick={handleActive}
+            <ButtonTue
+              isActive={isActive}
+              onClick={handleActiveTue}
             >
               Pessoa Jurídica
-            </button>
-          </div>
+            </ButtonTue>
+          </ContainerButton>
         </Formulario>
       </SectionForm>
       <Footer />
