@@ -78,3 +78,12 @@ padding: 206px 0 175px 0;
 
 `;
 
+export const Formulario = styled.div`
+background: black;
+width: 100%;
+height: 751px;
+display: flex;
+gap: 30px;
+
+`;
+

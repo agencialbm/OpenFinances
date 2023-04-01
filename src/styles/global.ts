@@ -11,6 +11,7 @@ export default createGlobalStyle`
   text-decoration: none;
   font-size: 1.6rem;
   font-family: 'Poppins', sans-serif;
+  color: white;
 }
 
 body, input, button, textarea{

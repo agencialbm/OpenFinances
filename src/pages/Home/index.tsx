@@ -3,14 +3,20 @@ import { Footer } from '@/components/Footer';
 import { Header } from '@/components/Header';
 import { Icon } from '@/components/Icon';
 import { TextCard } from '@/components/TextCard';
-import { Content, SectionHeader, ContentTexto, SectionMain } from './styled';
+import { Content, SectionHeader, ContentTexto, SectionMain, Formulario } from './styled';
 import imgfundo from '../../assets/FundoHeader.png';
 import { MultiplosCard } from '@/components/MultiplosCard';
+import {  FormPJ } from '@/components/FormPJ';
+import { FormPF } from '@/components/FormPF';
 
 
 export function Home() {
   return (
     <>
+      <Formulario>
+        <FormPF/>
+        <FormPJ/>
+      </Formulario>
       <SectionHeader>
         <Header />
         <Content>
