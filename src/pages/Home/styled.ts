@@ -8,6 +8,7 @@ export const SectionHeader = styled.div`
 
   background-color: black;
   width: 100%;
+
   padding: 35px 25px 0 148px;
 
 `;
@@ -60,6 +61,7 @@ export const ContentTexto = styled.div`
 export const SectionMain = styled.div`
 
 width: 100%;
+
 display: flex;
 flex-direction: column;
 align-items: center;
@@ -83,6 +85,7 @@ padding: 206px 0 175px 0;
 export const SectionForm = styled.div`
 background: black;
 width: 100%;
+
 padding: 90px 0;
 
 

@@ -119,7 +119,7 @@ export const CheckCustom = styled.div`
 `;
 
 export const ButtonCustom = styled.button`
- background: #4b79c9;
+ background-color: ${({theme}) => theme.YELLOW};
   backdrop-filter: blur(4rem);
   border-radius: 0.4rem;
 

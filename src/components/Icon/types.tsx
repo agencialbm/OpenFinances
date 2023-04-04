@@ -15,6 +15,8 @@ import { ReactComponent as  IconCreditoRural} from './svg/iconCreditoRural.svg';
 import { ReactComponent as  IconOperacoes} from './svg/iconOperacoes.svg';
 import { ReactComponent as  IconOperacoesEstru} from './svg/IconOperacoesEstru.svg';
 import { ReactComponent as  IconOutrasSol} from './svg/iconOperacoes.svg';
+import { ReactComponent as  IconWhatsapp} from './svg/iconWhatsapp.svg';
+import { ReactComponent as  IconArrow} from './svg/iconArrow.svg';
 
 
 
@@ -37,6 +39,8 @@ const IconsTypes = {
   iconOperacoes: IconOperacoes,
   IconOperacoesEstru: IconOperacoesEstru,
   iconOutrasSol: IconOutrasSol,
+  iconWhatsapp: IconWhatsapp,
+  iconArrow: IconArrow
 };
 
 export default IconsTypes;
@@ -59,6 +63,8 @@ export type IconName =
   | 'iconOperacoes'
   | 'IconOperacoesEstru'
   | 'iconOutrasSol'
+  | 'iconWhatsapp'
+  | 'iconArrow'
 
 
 

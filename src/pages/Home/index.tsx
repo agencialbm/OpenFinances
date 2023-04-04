@@ -1,7 +1,7 @@
-import { useState } from 'react';
-import { Footer } from '@/components/Footer';
-import { Header } from '@/components/Header';
-import { TextCard } from '@/components/TextCard';
+import { useState } from 'react'
+import { Footer } from '@/components/Footer'
+import { Header } from '@/components/Header'
+import { TextCard } from '@/components/TextCard'
 import {
   Content,
   SectionHeader,
@@ -12,25 +12,25 @@ import {
   ContainerButton,
   ButtonOne,
   ButtonTue
-} from './styled';
-import imgfundo from '../../assets/FundoHeader.png';
-import { MultiplosCard } from '@/components/MultiplosCard';
+} from './styled'
+import imgfundo from '../../assets/FundoHeader.png'
+import { MultiplosCard } from '@/components/MultiplosCard'
 
-import { FormPF } from '@/components/FormPF';
-import { FormPJ } from '@/components/FormPJ';
+import { FormPF } from '@/components/FormPF'
+import { FormPJ } from '@/components/FormPJ'
+import WhatsAPP from '@/components/WhatsAPP'
+import { TermosCookies } from '@/components/Termos&Cookies'
 
 export function Home() {
-  const [isActive, setIsActive] = useState(true);
+  const [isActive, setIsActive] = useState(true)
 
   const handleActiveOne = () => {
-    setIsActive(true);
-  };
+    setIsActive(true)
+  }
 
   const handleActiveTue = () => {
-    setIsActive(false);
-  };
-
-  console.log(isActive);
+    setIsActive(false)
+  }
 
   return (
     <>
@@ -68,20 +68,22 @@ export function Home() {
       </SectionMain>
       <SectionForm>
         <Formulario>
-          {isActive ?  <FormPF /> : <FormPJ />}
-          <ContainerButton >
-            <ButtonOne isActive={isActive} onClick={handleActiveOne}>Pessoa Física</ButtonOne>
+          {isActive ? <FormPF /> : <FormPJ />}
+          <ContainerButton>
+            <ButtonOne isActive={isActive} onClick={handleActiveOne}>
+              Pessoa Física
+            </ButtonOne>
 
-            <ButtonTue
-              isActive={isActive}
-              onClick={handleActiveTue}
-            >
+            <ButtonTue isActive={isActive} onClick={handleActiveTue}>
               Pessoa Jurídica
             </ButtonTue>
           </ContainerButton>
         </Formulario>
       </SectionForm>
+
       <Footer />
+      <TermosCookies/>
+      <WhatsAPP />
     </>
-  );
+  )
 }

@@ -16,6 +16,7 @@ export default createGlobalStyle`
 
 body, input, button, textarea{
   outline: none;
+ 
 }
 
 img{

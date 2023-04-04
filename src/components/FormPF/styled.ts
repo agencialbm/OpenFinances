@@ -76,34 +76,7 @@ export const SelectCustom = styled.div`
   }
 `;
 
-export const TextAreaCustom = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 0.6rem;
 
-  > label {
-    font-weight: 700;
-    font-size: 1.5rem;
-    line-height: 160%;
-
-  }
-
-  > textarea {
-    width: 58.1rem;
-    height: 15.6rem;
-    border: 0.1rem solid #9f9f9f;
-    border-radius: 0.4rem;
-    resize: none;
-    margin-bottom: 0.6rem;
-    background-color: transparent;
-  }
-  @media (max-width: 1800px) {
-    >textarea{
-
-      max-width: 450px;
-    }
-  }
-`;
 
 export const CheckCustom = styled.div`
   display: flex;
@@ -120,7 +93,7 @@ export const CheckCustom = styled.div`
 `;
 
 export const ButtonCustom = styled.button`
- background: #4b79c9;
+ background-color: ${({theme}) => theme.YELLOW};
   backdrop-filter: blur(4rem);
   border-radius: 0.4rem;
 
@@ -136,6 +109,6 @@ export const ButtonCustom = styled.button`
     background-color: #ced4da;
     color: #6c757d;
     cursor: not-allowed;
-    opacity: 0.7; // cor mais fraca
+    opacity: 0.7;
   }
 `;
