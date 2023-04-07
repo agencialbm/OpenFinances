@@ -106,9 +106,10 @@ export const ContentTexto = styled.div`
 
  @media (max-width: 680px){
   flex-direction: column;
-  padding: 57px 60px 85px 60px;
+  padding: 57px 40px 85px 40px;
   bottom: 0;
-  gap: 70px;
+  gap: 80px;
+  text-align: center;
  }
 
 
@@ -141,8 +142,13 @@ padding: 206px 0 175px 0;
 
 @media (max-width: 998px){
   align-items: start;
-  padding: 106px 0 120px 0;
+  padding: 220px 0 120px 0;
   box-sizing: content-box;
+
+  >h2{
+   margin-left: 110px;
+
+  }
 }
 
 @media (max-width: 680px){
@@ -153,6 +159,7 @@ padding: 206px 0 175px 0;
   >h2{
     font-size: 18px;
     line-height: 22px;
+    margin-left: 0px;
   }
 }
 
@@ -171,6 +178,7 @@ padding: 90px 0;
 }
 @media (max-width: 998px){
  box-sizing: content-box;
+
 
 }
 

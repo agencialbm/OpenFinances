@@ -43,7 +43,7 @@ export const ContainerText = styled.div`
 }
 
 @media(max-width: 680px){
-  max-width: 300px;
+  max-width: 290px;
 
   >h2{
 
@@ -53,7 +53,7 @@ export const ContainerText = styled.div`
 
   }
   p{
-    font-size: 14px;
+    font-size: 12px;
     line-height: 21px;
   }
 
