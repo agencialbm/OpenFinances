@@ -11,7 +11,8 @@ import {
   SectionForm,
   ContainerButton,
   ButtonOne,
-  ButtonTue
+  ButtonTue,
+  TitleMobile
 } from './styled'
 import imgfundo from '../../assets/FundoHeader.png'
 import { MultiplosCard } from '@/components/MultiplosCard'
@@ -70,6 +71,10 @@ export function Home() {
         <Formulario>
           {isActive ? <FormPF /> : <FormPJ />}
           <ContainerButton>
+            <TitleMobile>
+            <h2>Fale conosco</h2>
+            <p>Preencha o formulário e saiba mais.</p>
+            </TitleMobile>
             <ButtonOne isActive={isActive} onClick={handleActiveOne}>
               Pessoa Física
             </ButtonOne>
@@ -77,6 +82,7 @@ export function Home() {
             <ButtonTue isActive={isActive} onClick={handleActiveTue}>
               Pessoa Jurídica
             </ButtonTue>
+
           </ContainerButton>
         </Formulario>
       </SectionForm>

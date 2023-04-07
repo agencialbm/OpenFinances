@@ -7,6 +7,19 @@ padding: 80px 121px;
 width: 100%;
 background-color: ${({theme}) => theme.GRAY_100};
 
+@media (max-width: 1400px) {
+  padding: 60px 44px;
+}
+@media (max-width: 998px){
+ box-sizing: content-box;
+
+}
+
+@media (max-width: 680px){
+  box-sizing: border-box;
+  padding: 47px 45px 16px 45px;
+}
+
 `;
 
 export const LogoFooter = styled.div`
@@ -16,6 +29,10 @@ export const LogoFooter = styled.div`
   >img{
     width: 100%;
     object-fit: cover;
+  }
+
+  @media (max-width: 680px){
+    margin-bottom: 60px;
   }
 `;
 
@@ -88,6 +105,37 @@ export const FooterTop = styled.div`
     }
   }
 
+  @media (max-width: 1400px) {
+    padding-bottom: 60px;
+
+    .acesso, .contato{
+      >ul{
+        li{
+          font-size: 12px;
+          a{
+            font-size: 12px;
+          }
+        }
+      }
+    }
+}
+
+@media (max-width: 680px){
+  flex-direction: column;
+
+  .contato{
+    margin-top: 38px;
+
+
+  }
+
+  .contato, .acesso{
+    >h2{
+      margin-bottom: 45px;
+    }
+  }
+}
+
 `;
 
 export const FooterDown = styled.div`
@@ -96,6 +144,10 @@ export const FooterDown = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  >.container{
+    display: flex;
+    gap: 250px;
+  }
 
   >p{
     font-weight: 400;
@@ -109,6 +161,8 @@ export const FooterDown = styled.div`
     color: ${({theme}) => theme.YELLOW};
     }
   }
+
+
 
   .createLMB{
     display: flex;
@@ -139,5 +193,60 @@ export const FooterDown = styled.div`
       }
     }
   }
+  @media (max-width: 1600px){
+    >.container{
+      gap: 50px;
+    }
+  }
+
+  @media (max-width: 1400px) {
+    margin-top: 60px;
+
+    >p{
+      font-size: 12px;
+    }
+    .createLMB{
+      >p{
+        font-size: 12px;
+        line-height: 35px;
+      }
+    }
+    .social{
+      >ul{
+
+        gap: 5px;
+        a{
+          width: 38px;
+          height: 38px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 998px){
+    flex-direction: column;
+    >.container{
+      flex-direction: column-reverse;
+      gap: 0;
+      align-items: center;
+      margin: 15px 0;
+    }
+}
+
+@media (max-width: 680px){
+
+  flex-direction: column;
+  align-items: flex-start;
+
+
+  >p{
+    max-width: 378px;
+  }
+  .container{
+    gap: 60px;
+    align-items: flex-start;
+
+  }
+}
 
 `;

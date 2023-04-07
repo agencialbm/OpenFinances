@@ -17,6 +17,7 @@ import { ReactComponent as  IconOperacoesEstru} from './svg/IconOperacoesEstru.s
 import { ReactComponent as  IconOutrasSol} from './svg/iconOperacoes.svg';
 import { ReactComponent as  IconWhatsapp} from './svg/iconWhatsapp.svg';
 import { ReactComponent as  IconArrow} from './svg/iconArrow.svg';
+import { ReactComponent as  IconMobile} from './svg/iconMobile.svg';
 
 
 
@@ -40,7 +41,8 @@ const IconsTypes = {
   IconOperacoesEstru: IconOperacoesEstru,
   iconOutrasSol: IconOutrasSol,
   iconWhatsapp: IconWhatsapp,
-  iconArrow: IconArrow
+  iconArrow: IconArrow,
+  iconMobile: IconMobile
 };
 
 export default IconsTypes;
@@ -65,6 +67,7 @@ export type IconName =
   | 'iconOutrasSol'
   | 'iconWhatsapp'
   | 'iconArrow'
+  | 'iconMobile'
 
 
 

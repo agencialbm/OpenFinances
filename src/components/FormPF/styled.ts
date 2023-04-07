@@ -1,5 +1,12 @@
 import styled from 'styled-components';
 
+
+export const Form = styled.div`
+
+@media (max-width:680px){
+  width: 100%;
+}
+`;
 export const InputCustom = styled.div`
   display: flex;
   flex-direction: column;
@@ -25,6 +32,26 @@ export const InputCustom = styled.div`
 
   }
 
+  @media (max-width: 998px){
+  >label{
+  font-size: 10px;
+  }
+    >input{
+
+  max-width: 30.3rem;
+}
+  }
+
+  @media (max-width: 680px){
+    >label{
+  font-size: 13px;
+  }
+    >input{
+
+      max-width: 50.3rem;
+  }
+  }
+
 `;
 
 export const Title = styled.h1`
@@ -47,6 +74,31 @@ export const Title = styled.h1`
     font-family: 'Montserrat';
     margin-bottom: 55px;
     margin-top: 5px;
+  }
+
+  @media (max-width: 998px) {
+    >h2{
+      font-size: 35px;
+    }
+
+    >p{
+      font-size: 12px;
+
+    }
+  }
+
+  @media (max-width: 680px) {
+    display: none;
+    >h2{
+      font-size: 25px;
+      line-height: 30px;
+    }
+
+    >p{
+      font-size: 15px;
+      line-height: 18px;
+
+    }
   }
 
 
@@ -90,12 +142,19 @@ export const CheckCustom = styled.div`
     line-height: 160%;
     line-height: 160%;
   }
+
+  @media (max-width: 998px) {
+   >label{
+    font-size: 1.2rem;
+   }
+  }
 `;
 
 export const ButtonCustom = styled.button`
  background-color: ${({theme}) => theme.YELLOW};
   backdrop-filter: blur(4rem);
   border-radius: 0.4rem;
+
 
   width: 21.76rem;
   height: 5.1rem;
@@ -111,4 +170,6 @@ export const ButtonCustom = styled.button`
     cursor: not-allowed;
     opacity: 0.7;
   }
+
+
 `;

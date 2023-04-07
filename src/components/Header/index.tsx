@@ -1,6 +1,7 @@
 import { ContainerHeader } from './styled';
 
 import logoheader from '../../assets/logoHeader.png';
+import { Icon } from '../Icon';
 
 
 export function Header(){
@@ -15,6 +16,9 @@ export function Header(){
         <li><a href="">SOLUÇÕES</a></li>
         <li><a href="">FALE CONOSCO</a></li>
       </ul>
+      <div className="menuMobile">
+        <Icon name='iconMobile' size={25}/>
+      </div>
     </ContainerHeader>
   );
 

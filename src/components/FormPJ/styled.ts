@@ -1,5 +1,11 @@
 import styled from 'styled-components';
 
+export const Form = styled.div`
+
+@media (max-width:680px){
+  width: 100%;
+}
+`;
 export const InputCustom = styled.div`
   display: flex;
   flex-direction: column;
@@ -11,6 +17,7 @@ export const InputCustom = styled.div`
     line-height: 16px;
     text-transform: uppercase;
     color: #FFFFFF;
+
   }
 
   > input {
@@ -23,6 +30,28 @@ export const InputCustom = styled.div`
     color: black;
     padding-left: 10px;
 
+  }
+
+  @media (max-width: 998px){
+  >label{
+  font-size: 10px;
+  }
+    >input{
+
+  max-width: 30.3rem;
+
+}
+  }
+
+  @media (max-width: 680px){
+    >label{
+  font-size: 13px;
+
+  }
+    >input{
+
+      max-width: 58.3rem;
+  }
   }
 
 `;
@@ -47,6 +76,34 @@ export const Title = styled.h1`
     margin-bottom: 55px;
     margin-top: 5px;
   }
+
+  @media (max-width: 998px) {
+
+    >h2{
+      font-size: 35px;
+    }
+
+    >p{
+      font-size: 12px;
+
+    }
+  }
+
+  @media (max-width: 680px) {
+    display: none;
+    >h2{
+      font-size: 25px;
+      line-height: 30px;
+    }
+
+    >p{
+      font-size: 15px;
+      line-height: 18px;
+
+    }
+  }
+
+
 
 
 
@@ -115,6 +172,11 @@ export const CheckCustom = styled.div`
     font-size: 1.5rem;
     line-height: 160%;
     line-height: 160%;
+  }
+  @media (max-width: 998px) {
+   >label{
+    font-size: 1.2rem;
+   }
   }
 `;
 

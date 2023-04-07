@@ -23,4 +23,36 @@ export const ContainerButton = styled.button`
     color: ${({ theme }) => theme.BLACK};
   }
 
+  @media (max-width: 1600px) {
+    width: 276px;
+    height: 115px;
+    gap: 22px;
+  }
+
+  @media (max-width: 998px) {
+    width: 250px;
+    height: 115px;
+    gap: 15px;
+    padding-left: 15px;
+
+    >p{
+      font-size: 14px;
+    }
+  }
+
+  @media (max-width: 680px){
+    width: 286px;
+    gap: 32px;
+    padding-left: 30px;
+
+
+    >p{
+      font-size: 16px;
+      line-height: 20px;
+    }
+
+  }
+
+
+
 `;

@@ -40,30 +40,33 @@ export function Footer() {
         <p>Open Finances © 2022 - Todos os direitos reservados | <a href="https://drive.google.com/file/d/11mliZoxv58yTZ2y1VvHHoG6FyW6LDjqW/view?usp=drivesdk" target="_blank" rel="noreferrer">
           Política de privacidade
         </a> </p>
-        <div className="createLMB">
-          <p>Created with much love by:</p>
-          <Icon name='iconLBM' size={45}/>
+        <div className='container'>
 
-        </div>
+          <div className="createLMB">
+            <p>Created with much love by:</p>
+            <Icon name='iconLBM' size={45}/>
 
-        <div className="social">
-          <ul>
-            <li>
-              <a href="">
-                <Icon  name="iconLinkedln" size={20} />
-              </a>
-            </li>
-            <li>
-              <a href="">
-                <Icon name="iconFacebook" size={20} />
-              </a>
-            </li>
-            <li>
-              <a href="https://www.instagram.com/agencialbm/">
-                <Icon name="iconInstagram" size={20} />
-              </a>
-            </li>
-          </ul>
+          </div>
+
+          <div className="social">
+            <ul>
+              <li>
+                <a href="">
+                  <Icon  name="iconLinkedln" size={20} />
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <Icon name="iconFacebook" size={20} />
+                </a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/agencialbm/">
+                  <Icon name="iconInstagram" size={20} />
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
       </FooterDown>
     </ContainerFooter>

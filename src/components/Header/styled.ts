@@ -10,6 +10,7 @@ align-items: center;
 
 .logoHeader{
   display: flex;
+
 }
 
 >ul{
@@ -27,8 +28,35 @@ align-items: center;
     }
   }
 
-
-
-
 }
+
+.menuMobile{
+  display: none;
+  cursor: pointer;
+}
+
+@media (max-width: 1600px) {
+    .logoHeader{
+      Width: 128px;
+      Height: 95.6px;
+    }
+
+  > ul{
+      max-width: 620px;
+      li {
+        a {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 680px){
+    ul{
+      display: none;
+    }
+    >.menuMobile{
+      display: block;
+    }
+  }
 `;

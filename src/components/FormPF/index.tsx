@@ -1,7 +1,7 @@
 import { yupResolver } from '@hookform/resolvers/yup';
 import { useForm } from 'react-hook-form';
 import * as yup from 'yup';
-import { ButtonCustom, CheckCustom, InputCustom, Title } from './styled';
+import { ButtonCustom, CheckCustom, Form, InputCustom, Title } from './styled';
 
 import React, { useState } from 'react';
 import { useFormik } from 'formik';
@@ -52,8 +52,10 @@ export function FormPF() {
     resolver: yupResolver(schema)
   });
 
+  
+
   return (
-    <form>
+    <Form >
       <Title>
         <h2>Fale conosco</h2>
         <p>Preencha o formulário e saiba mais.</p>
@@ -113,6 +115,6 @@ export function FormPF() {
       <ButtonCustom type="submit" disabled={!isValid}>
         Enviar
       </ButtonCustom>
-    </form>
+    </Form>
   );
 }

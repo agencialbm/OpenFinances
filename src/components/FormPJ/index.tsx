@@ -1,10 +1,10 @@
 import { yupResolver } from '@hookform/resolvers/yup';
 import { useForm } from 'react-hook-form';
 import * as yup from 'yup';
-import { ButtonCustom, CheckCustom, InputCustom, Title } from './styled';
+import { ButtonCustom, CheckCustom, Form, InputCustom, Title } from './styled';
 
 import React, { useState } from 'react';
-import { useFormik } from 'formik';
+
 
 type FormData = {
   razaoSocial: string
@@ -38,7 +38,7 @@ export function FormPJ() {
 
   return (
 
-    <form >
+    <Form >
       <Title>
         <h2>Fale conosco</h2>
         <p>Preencha o formulário e saiba mais.</p>
@@ -87,6 +87,6 @@ export function FormPJ() {
       <ButtonCustom type="submit" disabled={!isValid}>
         Enviar
       </ButtonCustom>
-    </form>
+    </Form>
   );
 }

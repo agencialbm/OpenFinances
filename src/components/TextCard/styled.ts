@@ -1,3 +1,4 @@
+import { Content } from './../../pages/Home/styled';
 import styled from 'styled-components';
 
 
@@ -6,6 +7,7 @@ export const ContainerText = styled.div`
   max-width: 330px;
   background-color: transparent;
   text-align: center;
+
 
   >h2{
 
@@ -25,6 +27,37 @@ export const ContainerText = styled.div`
     color: ${({ theme }) => theme.WHITE};
 
   }
+
+@media(max-width: 1400px){
+  max-width: 230px;
+  height: 150px;
+  >h2{
+    font-size: 20px;
+    margin-bottom: 28px;
+
+
+  }
+  p{
+    font-size: 12px;
+  }
+}
+
+@media(max-width: 680px){
+  max-width: 300px;
+
+  >h2{
+
+    font-size: 25px;
+    line-height: 38px;
+
+
+  }
+  p{
+    font-size: 14px;
+    line-height: 21px;
+  }
+
+}
 
 `;
 
