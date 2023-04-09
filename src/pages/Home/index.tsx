@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import {  useState } from 'react'
 import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
 import { TextCard } from '@/components/TextCard'
@@ -22,6 +22,7 @@ import { FormPJ } from '@/components/FormPJ'
 import WhatsAPP from '@/components/WhatsAPP'
 import { TermosCookies } from '@/components/Termos&Cookies'
 
+
 export function Home() {
   const [isActive, setIsActive] = useState(true)
 
@@ -33,22 +34,27 @@ export function Home() {
     setIsActive(false)
   }
 
+
+
   return (
     <>
       <SectionHeader>
         <Header />
-        <Content>
-          <div className="texto01">
-            <h2>
+        <Content >
+          <div className="texto01" >
+            <h2 data-aos="fade-right">
               Buscamos as melhores alternativas de negócios para os nossos
               clientes.
             </h2>
           </div>
-          <div className="imgfundo">
-            <img src={imgfundo} alt="" />
+          <div className="imgfundo" >
+            <img  src={imgfundo} alt="" />
+          </div>
+          <div className="linkSobre" id='sobre'>
+
           </div>
         </Content>
-        <ContentTexto>
+        <ContentTexto  data-aos="fade-up" >
           <TextCard
             title="Missão"
             description="Nossa missão é atuar na indicação dos melhores players financeiros do mercado para os nossos clientes por meio de operações customizadas."
@@ -63,11 +69,11 @@ export function Home() {
           />
         </ContentTexto>
       </SectionHeader>
-      <SectionMain>
-        <h2>Conheça nossas soluções de crédito para você e sua empresa</h2>
-        <MultiplosCard />
+      <SectionMain id='solucoes' >
+        <h2  data-aos="fade-up" >Conheça nossas soluções de crédito para você e sua empresa</h2>
+        <MultiplosCard/>
       </SectionMain>
-      <SectionForm>
+      <SectionForm id='faleconosco'>
         <Formulario>
           {isActive ? <FormPF /> : <FormPJ />}
           <ContainerButton>
@@ -75,11 +81,11 @@ export function Home() {
             <h2>Fale conosco</h2>
             <p>Preencha o formulário e saiba mais.</p>
             </TitleMobile>
-            <ButtonOne isActive={isActive} onClick={handleActiveOne}>
+            <ButtonOne isActive={isActive} onClick={handleActiveOne} data-aos="zoom-in">
               Pessoa Física
             </ButtonOne>
 
-            <ButtonTue isActive={isActive} onClick={handleActiveTue}>
+            <ButtonTue isActive={isActive} onClick={handleActiveTue} data-aos="zoom-in">
               Pessoa Jurídica
             </ButtonTue>
 

@@ -12,16 +12,6 @@ export function TermosCookies() {
   useEffect(() => {
     sessionStorage.setItem('acceptTermos', JSON.stringify(acceptTermos));
 
-    // // Define um listener para o evento beforeunload
-    // const handleBeforeUnload = () => {
-    //   sessionStorage.setItem('acceptTermos', JSON.stringify(acceptTermos));
-    // }
-    // window.addEventListener('beforeunload', handleBeforeUnload);
-
-    // // Remove o listener quando o componente é desmontado
-    // return () => {
-    //   window.removeEventListener('beforeunload', handleBeforeUnload);
-    // }
   }, [acceptTermos])
 
   const handleAcceptTermos = () => {

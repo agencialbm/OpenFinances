@@ -190,6 +190,13 @@ export const FooterDown = styled.div`
         display: flex;
         align-items: center;
         justify-content: center;
+        transition: all 0.3s;
+
+        &:hover{
+          transform: translateY(-15px);
+        }
+
+
       }
     }
   }

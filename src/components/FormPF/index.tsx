@@ -2,9 +2,9 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import { useForm } from 'react-hook-form';
 import * as yup from 'yup';
 import { ButtonCustom, CheckCustom, Form, InputCustom, Title } from './styled';
+import { CustomInputMask } from '../inputMask';
 
-import React, { useState } from 'react';
-import { useFormik } from 'formik';
+
 
 type FormData = {
   name: string
@@ -20,42 +20,34 @@ const schema = yup.object().shape({
   phone: yup.string().required(),
   email: yup.string().trim().email().required(),
   endereco: yup.string().required(),
-  cpf: yup
-    .string()
-    .matches(/^\d{3}\.\d{3}\.\d{3}-\d{2}$/, 'CPF inválido')
-    .required('CPF é obrigatório'),
+  cpf: yup.string().required('CPF é obrigatório'),
   autorizoWhatsApp: yup.boolean()
 });
 
 export function FormPF() {
-  const [mask, setMask] = useState('');
-
-  const formik = useFormik({
-    initialValues: { cpf: '' },
-    validationSchema: schema,
-    onSubmit: values => {
-      alert(JSON.stringify(values, null, 2));
-    }
-  });
-
-  const handleCpfChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const cpf = event.target.value.replace(/\D/g, '');
-    setMask(cpf.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, '$1.$2.$3-$4'));
-    formik.setFieldValue('cpf', cpf);
-  };
 
   const {
     register,
     setValue,
+    reset,
+    handleSubmit,
     formState: { errors, isValid }
   } = useForm<FormData>({
     resolver: yupResolver(schema)
   });
 
-  
+  const onSubmit = async (data: FormData) => {
+    try {
+      reset();
+    } catch (error) {
+      console.error('Erro ao enviar o formulário:', error);
+    }
+  };
+
+
 
   return (
-    <Form >
+    <Form  data-aos="fade-right"  onSubmit={handleSubmit(onSubmit)}>
       <Title>
         <h2>Fale conosco</h2>
         <p>Preencha o formulário e saiba mais.</p>
@@ -72,23 +64,21 @@ export function FormPF() {
         {errors.endereco && <span>{errors.endereco.message}</span>}
       </InputCustom>
       <InputCustom>
+
         <label htmlFor="cpf">CPF</label>
-        <input
+
+        <CustomInputMask mask="999.999.999-99"
           {...register('cpf')}
           id="cpf"
           type="text"
-          onChange={handleCpfChange}
-          value={mask}
         />
-        {formik.touched.cpf && formik.errors.cpf ? (
-          <div>{formik.errors.cpf}</div>
-        ) : null}
         {errors.cpf && <span>{errors.cpf.message}</span>}
       </InputCustom>
 
       <InputCustom>
         <label htmlFor="phone">Telefone*</label>
-        <input {...register('phone')} id="phone" type="text" />
+        <CustomInputMask mask="(99) 99999-9999"
+        {...register('phone')} id="phone" type="text" />
         {errors.phone && <span>{errors.phone.message}</span>}
       </InputCustom>
 

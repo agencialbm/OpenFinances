@@ -16,7 +16,7 @@ export default createGlobalStyle`
 
 body, input, button, textarea{
   outline: none;
- 
+
 }
 
 img{
@@ -26,6 +26,7 @@ img{
 
 html{
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 button, a{

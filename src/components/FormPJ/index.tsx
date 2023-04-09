@@ -4,6 +4,7 @@ import * as yup from 'yup';
 import { ButtonCustom, CheckCustom, Form, InputCustom, Title } from './styled';
 
 import React, { useState } from 'react';
+import { CustomInputMask } from '../inputMask';
 
 
 type FormData = {
@@ -29,16 +30,26 @@ export function FormPJ() {
   const {
     register,
     setValue,
+    reset,
+    handleSubmit,
     formState: { errors, isValid }
   } = useForm<FormData>({
     resolver: yupResolver(schema)
   });
 
+  const onSubmit = async (data: FormData) => {
+    try {
+      reset();
+    } catch (error) {
+      console.error('Erro ao enviar o formulário:', error);
+    }
+  };
+
 
 
   return (
 
-    <Form >
+    <Form data-aos="fade-right" onSubmit={handleSubmit(onSubmit)}>
       <Title>
         <h2>Fale conosco</h2>
         <p>Preencha o formulário e saiba mais.</p>
@@ -46,13 +57,16 @@ export function FormPJ() {
 
       <InputCustom>
         <label htmlFor="razaoSocial">Razão Social*</label>
-        <input {...register('razaoSocial')} id="razaoSocial" type="text" />
+        <input
+        {...register('razaoSocial')} id="razaoSocial" type="text" />
         {errors.razaoSocial && <span>{errors.razaoSocial.message}</span>}
       </InputCustom>
 
       <InputCustom>
         <label htmlFor="cnpj">Cnpj*</label>
-        <input {...register('cnpj')} id="cnpj" type="cnpj" />
+        <CustomInputMask mask='99.999.999/9999-99'
+
+        {...register('cnpj')} id="cnpj" type="cnpj" />
         {errors.cnpj && <span>{errors.cnpj.message}</span>}
       </InputCustom>
 
@@ -65,7 +79,8 @@ export function FormPJ() {
 
       <InputCustom>
         <label htmlFor="phone">Telefone*</label>
-        <input {...register('phone')} id="phone" type="text" />
+        <CustomInputMask mask='(99) 99999-9999'
+        {...register('phone')} id="phone" type="text" />
         {errors.phone && <span>{errors.phone.message}</span>}
       </InputCustom>
 

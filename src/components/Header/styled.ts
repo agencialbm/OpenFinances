@@ -52,11 +52,19 @@ align-items: center;
   }
 
   @media (max-width: 680px){
+
+    padding: 0px 44px 0 44px;
     ul{
       display: none;
     }
     >.menuMobile{
       display: block;
+      >button{
+        background: transparent;
+      }
     }
   }
+
+
+
 `;

@@ -1,43 +1,37 @@
-import { createContext, useContext, useState } from 'react';
+import { createContext, FunctionComponent, ReactNode, useState } from "react";
 
-type ModalContextType = {
-  isOpen: boolean;
+interface IModal {
   openModal: () => void;
   closeModal: () => void;
-};
+  modalVisible: boolean;
+}
 
-const ModalContext = createContext<ModalContextType>({
-  isOpen: false,
+export const ModalContext = createContext<IModal>({
   openModal: () => {},
   closeModal: () => {},
+  modalVisible: false,
 });
 
-export const useModal = () => useContext(ModalContext);
+interface IModalContextProvider {
+  children: ReactNode;
+}
 
-type ModalProviderProps = {
-  children: React.ReactNode;
-};
-
-export const ModalProvider = ({ children }: ModalProviderProps) => {
-  const [isOpen, setIsOpen] = useState(false);
+const ModalContextProvider = ({ children }: IModalContextProvider) => {
+  const [modalVisible, setModalVisible] = useState<boolean>(false);
 
   const openModal = () => {
-    setIsOpen(true);
+    setModalVisible(true);
   };
 
   const closeModal = () => {
-    setIsOpen(false);
-  };
-
-  const value: ModalContextType = {
-    isOpen,
-    openModal,
-    closeModal,
+    setModalVisible(false);
   };
 
   return (
-    <ModalContext.Provider value={value}>
+    <ModalContext.Provider value={{ modalVisible, openModal, closeModal }}>
       {children}
     </ModalContext.Provider>
   );
 };
+
+export default ModalContextProvider;

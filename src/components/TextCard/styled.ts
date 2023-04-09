@@ -17,6 +17,7 @@ export const ContainerText = styled.div`
     line-height: 38px;
     color: ${({ theme }) => theme.WHITE};
     margin-bottom: 38px;
+    
   }
 
   >p{
@@ -31,9 +32,11 @@ export const ContainerText = styled.div`
 @media(max-width: 1400px){
   max-width: 230px;
   height: 150px;
+
   >h2{
     font-size: 20px;
     margin-bottom: 28px;
+
 
 
   }

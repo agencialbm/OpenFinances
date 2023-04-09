@@ -18,7 +18,7 @@ function WhatsAPP() {
   };
 
   useEffect(() => {
-    Aos.init();
+    Aos.init({duration: 2000});
   }, []);
 
   // const scrollToTop = () => {

@@ -4,31 +4,37 @@ import logofooter from '../../assets/logoFooter.png';
 import { Icon } from '../Icon';
 export function Footer() {
   return (
-    <ContainerFooter>
+    <ContainerFooter >
       <FooterTop>
         <LogoFooter>
           <img src={logofooter} alt="" />
         </LogoFooter>
 
-        <div className="acesso">
+        <div className="acesso" data-aos="fade-right"
+              data-aos-offset="300"
+              data-aos-easing="ease-in-sine"
+              data-aos-duration="1000">
           <h2>Acesso Rápido</h2>
           <ul>
             <li>
              <Icon name='iconArrow' size={12}/>
-              <a href="">Sobre Nós</a>
+              <a href="#sobre">Sobre Nós</a>
             </li>
             <li>
             <Icon name='iconArrow' size={12}/>
-              <a href="">Soluções</a>
+              <a href="#solucoes">Soluções</a>
             </li>
             <li>
             <Icon name='iconArrow' size={12}/>
-              <a href="">Contato</a>
+              <a href="#faleconosco">Contato</a>
             </li>
           </ul>
         </div>
 
-        <div className="contato">
+        <div className="contato" data-aos="fade-right"
+              data-aos-offset="300"
+              data-aos-easing="ease-in-sine"
+              data-aos-duration="800">
           <h2>Contato</h2>
           <ul>
             <li>contato@openfinances.com.br</li>
@@ -36,8 +42,8 @@ export function Footer() {
           </ul>
         </div>
       </FooterTop>
-      <FooterDown>
-        <p>Open Finances © 2022 - Todos os direitos reservados | <a href="https://drive.google.com/file/d/11mliZoxv58yTZ2y1VvHHoG6FyW6LDjqW/view?usp=drivesdk" target="_blank" rel="noreferrer">
+      <FooterDown >
+        <p >Open Finances © 2022 - Todos os direitos reservados | <a href="https://drive.google.com/file/d/11mliZoxv58yTZ2y1VvHHoG6FyW6LDjqW/view?usp=drivesdk" target="_blank" rel="noreferrer">
           Política de privacidade
         </a> </p>
         <div className='container'>
@@ -51,17 +57,17 @@ export function Footer() {
           <div className="social">
             <ul>
               <li>
-                <a href="">
+                <a href="/">
                   <Icon  name="iconLinkedln" size={20} />
                 </a>
               </li>
               <li>
-                <a href="">
+                <a href="/">
                   <Icon name="iconFacebook" size={20} />
                 </a>
               </li>
               <li>
-                <a href="https://www.instagram.com/agencialbm/">
+                <a href="/">
                   <Icon name="iconInstagram" size={20} />
                 </a>
               </li>

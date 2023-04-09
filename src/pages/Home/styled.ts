@@ -1,3 +1,7 @@
+import { calculateIdealWeight } from './../../utils/example';
+
+
+
 import styled from 'styled-components';
 
 interface Prop {
@@ -8,29 +12,30 @@ export const SectionHeader = styled.div`
 
   background-color: black;
   width: 100%;
-
   padding: 35px 25px 0 148px;
-
 
   @media (max-width: 1600px){
     padding: 35px 25px 0 121px;
   }
 
-  @media (max-width: 1400px){
+  @media (max-width: 1500px){
 
-  padding: 35px 44px 0 44px;
+  padding: 35px 60px 0 60px;
 
 
  }
 
  @media (max-width: 998px){
   box-sizing: content-box;
+  padding: 35px 44px 0 44px;
+
 
  }
 
  @media (max-width: 680px){
 
   box-sizing: border-box;
+  padding: 35px 0px 0px 0px;
  }
 
 
@@ -53,11 +58,28 @@ export const Content = styled.div`
   }
  }
 
- .imgfundo{
-
-  max-width: 700px;
-
+ .linkSobre{
+  position: absolute;
+  bottom: -200px;
+  >p{
+    color: black;
+  }
  }
+
+ @media (max-width: 998px){
+  flex-direction: column;
+  align-items: flex-start;
+
+
+  .texto01{
+
+    >h2{
+      margin-top: 107px;
+    }
+  }
+ }
+
+
 
  @media (max-width: 680px) {
   flex-direction: column;
@@ -68,7 +90,8 @@ export const Content = styled.div`
     >h2{
       font-size: 18px;
       line-height: 27px;
-      margin-top: 107px;
+      margin-left: 60px;
+
 
     }
   }
@@ -91,11 +114,11 @@ export const ContentTexto = styled.div`
  border-radius: 10px;
 
  @media (max-width: 1600px){
-  max-width: 1200px;
-  padding: 54px 51px 68px 24px;
+
+  padding: 54px 24px 68px 24px;
  }
  @media (max-width: 1400px){
-  max-width: 1200px;
+
 
  }
 
@@ -143,7 +166,7 @@ padding: 206px 0 175px 0;
 @media (max-width: 998px){
   align-items: start;
   padding: 220px 0 120px 0;
-  box-sizing: content-box;
+
 
   >h2{
    margin-left: 110px;

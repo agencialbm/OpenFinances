@@ -18,6 +18,7 @@ import { ReactComponent as  IconOutrasSol} from './svg/iconOperacoes.svg';
 import { ReactComponent as  IconWhatsapp} from './svg/iconWhatsapp.svg';
 import { ReactComponent as  IconArrow} from './svg/iconArrow.svg';
 import { ReactComponent as  IconMobile} from './svg/iconMobile.svg';
+import { ReactComponent as  IconCloseModal} from './svg/icon-close.svg';
 
 
 
@@ -42,7 +43,8 @@ const IconsTypes = {
   iconOutrasSol: IconOutrasSol,
   iconWhatsapp: IconWhatsapp,
   iconArrow: IconArrow,
-  iconMobile: IconMobile
+  iconMobile: IconMobile,
+  iconCloseModal: IconCloseModal
 };
 
 export default IconsTypes;
@@ -68,6 +70,7 @@ export type IconName =
   | 'iconWhatsapp'
   | 'iconArrow'
   | 'iconMobile'
+  | 'iconCloseModal'
 
 
 

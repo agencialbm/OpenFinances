@@ -1,11 +1,15 @@
+
 import { Button } from '../Button';
 import { Icon } from '../Icon';
 import { ContainerMultCard } from './styled';
 
+
 export function MultiplosCard() {
+
+
   return (
-    <ContainerMultCard>
-      <Button title="BNDS">
+    <ContainerMultCard >
+      <Button  title="BNDS" >
         <Icon name="iconButtonCard" size={50} />
       </Button>
       <Button title="Capital de Giro">

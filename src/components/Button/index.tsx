@@ -1,5 +1,6 @@
-import { ReactNode } from 'react';
+import { ReactNode, useEffect } from 'react';
 import { ContainerButton } from './styled';
+
 
 interface IButton {
   children: ReactNode
@@ -7,8 +8,11 @@ interface IButton {
 }
 
 export function Button({children, title}: IButton){
+
+
+
   return(
-    <ContainerButton data-testid="button">
+    <ContainerButton data-testid="button" data-aos="zoom-in-up" >
       <div>{children}</div>
 
       <p>{title}</p>
