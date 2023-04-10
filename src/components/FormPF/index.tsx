@@ -3,6 +3,7 @@ import { useForm } from 'react-hook-form';
 import * as yup from 'yup';
 import { ButtonCustom, CheckCustom, Form, InputCustom, Title } from './styled';
 import { CustomInputMask } from '../inputMask';
+import {  validateCPF } from 'validations-br';
 
 
 
@@ -20,7 +21,7 @@ const schema = yup.object().shape({
   phone: yup.string().required(),
   email: yup.string().trim().email().required(),
   endereco: yup.string().required(),
-  cpf: yup.string().required('CPF é obrigatório'),
+  cpf: yup.string().required('CPF é obrigatório').test('cpf', 'Por favor, inserir um CPF válido', value => validateCPF(value)),
   autorizoWhatsApp: yup.boolean()
 });
 
@@ -38,6 +39,8 @@ export function FormPF() {
 
   const onSubmit = async (data: FormData) => {
     try {
+      data.cpf = '',
+      console.log(data);
       reset();
     } catch (error) {
       console.error('Erro ao enviar o formulário:', error);
@@ -46,8 +49,10 @@ export function FormPF() {
 
 
 
+
   return (
     <Form  data-aos="fade-right"  onSubmit={handleSubmit(onSubmit)}>
+
       <Title>
         <h2>Fale conosco</h2>
         <p>Preencha o formulário e saiba mais.</p>
