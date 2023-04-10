@@ -2,8 +2,6 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import { useForm } from 'react-hook-form';
 import * as yup from 'yup';
 import { ButtonCustom, CheckCustom, Form, InputCustom, Title } from './styled';
-
-import React, { useState } from 'react';
 import { CustomInputMask } from '../inputMask';
 
 
@@ -25,8 +23,6 @@ const schema = yup.object().shape({
 
 export function FormPJ() {
 
-
-
   const {
     register,
     setValue,
@@ -39,12 +35,13 @@ export function FormPJ() {
 
   const onSubmit = async (data: FormData) => {
     try {
+      setValue('cnpj', '');
+      setValue('phone', '');
       reset();
     } catch (error) {
       console.error('Erro ao enviar o formulário:', error);
     }
   };
-
 
 
   return (

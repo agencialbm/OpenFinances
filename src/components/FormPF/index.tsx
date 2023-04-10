@@ -6,7 +6,6 @@ import { CustomInputMask } from '../inputMask';
 import {  validateCPF } from 'validations-br';
 
 
-
 type FormData = {
   name: string
   phone: string
@@ -39,25 +38,28 @@ export function FormPF() {
 
   const onSubmit = async (data: FormData) => {
     try {
-      data.cpf = '',
-      console.log(data);
-      reset();
+     console.log(data);
+
+     reset();
+     setValue('phone', '');
+     setValue('cpf', '');
+
     } catch (error) {
       console.error('Erro ao enviar o formulário:', error);
-    }
-  };
+    } finally{
 
+
+    }
+  }
 
 
 
   return (
     <Form  data-aos="fade-right"  onSubmit={handleSubmit(onSubmit)}>
-
       <Title>
         <h2>Fale conosco</h2>
         <p>Preencha o formulário e saiba mais.</p>
       </Title>
-
       <InputCustom>
         <label htmlFor="name">Nome completo*</label>
         <input {...register('name')} id="name" type="text" />
