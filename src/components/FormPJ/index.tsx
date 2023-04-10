@@ -3,6 +3,8 @@ import { useForm } from 'react-hook-form';
 import * as yup from 'yup';
 import { ButtonCustom, CheckCustom, Form, InputCustom, Title } from './styled';
 import { CustomInputMask } from '../inputMask';
+import {  validateCNPJ } from 'validations-br';
+
 
 
 type FormData = {
@@ -17,7 +19,7 @@ const schema = yup.object().shape({
   razaoSocial: yup.string().trim().required(),
   phone: yup.string().required(),
   email: yup.string().trim().email().required(),
-  cnpj: yup.string().required(),
+  cnpj:  yup.string().required('O CNPJ da empresa é obrigatório').test('cnpj', 'Por favor, inserir um CNPJ válido', value => validateCNPJ(value)),
   autorizoWhatsApp: yup.boolean(),
 });
 
