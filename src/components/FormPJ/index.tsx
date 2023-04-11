@@ -4,6 +4,7 @@ import * as yup from 'yup';
 import { ButtonCustom, CheckCustom, Form, InputCustom, Title } from './styled';
 import { CustomInputMask } from '../inputMask';
 import {  validateCNPJ } from 'validations-br';
+import emailjs from '@emailjs/browser'
 
 
 
@@ -36,10 +37,22 @@ export function FormPJ() {
   });
 
   const onSubmit = async (data: FormData) => {
+
+       const templateParams = {
+      from_razaoSocial: data.razaoSocial,
+      from_phone: data.phone,
+      from_email: data.email,
+      from_cnpj: data.cnpj,
+
+    }
+    emailjs.send('service_vemflzy', 'template_r7rcvgf', templateParams, '9vp6ipo6uye6MTwty')
+
     try {
       setValue('cnpj', '');
       setValue('phone', '');
       reset();
+
+
     } catch (error) {
       console.error('Erro ao enviar o formulário:', error);
     }

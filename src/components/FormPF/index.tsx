@@ -4,6 +4,7 @@ import * as yup from 'yup';
 import { ButtonCustom, CheckCustom, Form, InputCustom, Title } from './styled';
 import { CustomInputMask } from '../inputMask';
 import {  validateCPF } from 'validations-br';
+import emailjs from '@emailjs/browser'
 
 
 type FormData = {
@@ -37,9 +38,17 @@ export function FormPF() {
   });
 
   const onSubmit = async (data: FormData) => {
-    try {
-     console.log(data);
 
+    const templateParams = {
+      from_name: data.name,
+      from_phone: data.phone,
+      from_email: data.email,
+      from_endereco: data.endereco,
+      from_cpf: data.cpf,
+    }
+    emailjs.send('service_vemflzy', 'template_wr3s29b', templateParams, '9vp6ipo6uye6MTwty')
+    try {
+     
      reset();
      setValue('phone', '');
      setValue('cpf', '');
