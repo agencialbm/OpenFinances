@@ -46,9 +46,9 @@ export function FormPF() {
       from_endereco: data.endereco,
       from_cpf: data.cpf,
     }
-    emailjs.send('service_vemflzy', 'template_wr3s29b', templateParams, '9vp6ipo6uye6MTwty')
+    emailjs.send('service_m6zzctp', 'template_bst0epd', templateParams, 'ow-QkAuE6gHMYdibT')
     try {
-     
+
      reset();
      setValue('phone', '');
      setValue('cpf', '');

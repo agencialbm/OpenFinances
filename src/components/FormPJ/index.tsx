@@ -45,7 +45,7 @@ export function FormPJ() {
       from_cnpj: data.cnpj,
 
     }
-    emailjs.send('service_vemflzy', 'template_r7rcvgf', templateParams, '9vp6ipo6uye6MTwty')
+    emailjs.send('service_m6zzctp', 'template_bzjdd1m', templateParams, 'ow-QkAuE6gHMYdibT')
 
     try {
       setValue('cnpj', '');
