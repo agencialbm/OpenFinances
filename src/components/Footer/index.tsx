@@ -57,17 +57,17 @@ export function Footer() {
           <div className="social">
             <ul>
               <li>
-                <a href="/">
+                <a href="https://www.linkedin.com/company/open-finances/" target="_blank" rel="noreferrer">
                   <Icon  name="iconLinkedln" size={20} />
                 </a>
               </li>
               <li>
-                <a href="/">
+                <a href="https://www.facebook.com/openfinances?mibextid=ZbWKwL" target="_blank" rel="noreferrer">
                   <Icon name="iconFacebook" size={20} />
                 </a>
               </li>
               <li>
-                <a href="/">
+                <a href="https://instagram.com/open.finances?igshid=YmMyMTA2M2Y=" target="_blank" rel="noreferrer" >
                   <Icon name="iconInstagram" size={20} />
                 </a>
               </li>
