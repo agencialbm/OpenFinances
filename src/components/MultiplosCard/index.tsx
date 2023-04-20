@@ -9,7 +9,7 @@ export function MultiplosCard() {
 
   return (
     <ContainerMultCard >
-      <Button  title="BNDS" >
+      <Button  title="BNDES" >
         <Icon name="iconButtonCard" size={50} />
       </Button>
       <Button title="Capital de Giro">
