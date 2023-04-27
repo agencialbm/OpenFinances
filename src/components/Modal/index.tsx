@@ -4,8 +4,6 @@ import { ModalContext } from '@/context/example';
 import { Icon } from '../Icon';
 
 
-
-
 interface IModal {
   visible: boolean;
   onClose: () => void
@@ -56,11 +54,9 @@ export function Modal({visible, onClose}: IModal){
             <Icon name='iconCloseModal' size={30} />
           </button>
           <MenuModal>
-
-          <li> <a href='#sobre'><button type='button' onClick={handleSobre}> SOBRE </button></a></li>
-          <li> <a href='#solucoes'><button onClick={handleSolucoes}>SOLUÇÕES</button></a></li>
-          <li><a href='#faleconosco'><button onClick={handleFaleConosco}>FALE CONOSCO</button></a> </li>
-
+            <li> <a href='#sobre'><button type='button' onClick={handleSobre}> SOBRE </button></a></li>
+            <li> <a href='#solucoes'><button onClick={handleSolucoes}>SOLUÇÕES</button></a></li>
+            <li><a href='#faleconosco'><button onClick={handleFaleConosco}>FALE CONOSCO</button></a> </li>
 
           </MenuModal>
       </ContainerModal>
